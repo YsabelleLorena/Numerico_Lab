@@ -1,3 +1,7 @@
+#==========================================================================================#
+#=====================================AULA 01==============================================#
+#==========================================================================================#
+
 #Os prints ultilizados nesses condigos são nescessario apenas se não estiver ultilizando o colab
 
 #Propriedade = soma de parcelas iguais
@@ -43,3 +47,28 @@ print(str(Binary(0.125)).replace("0b","x="))
 #====================BINARIO FRACIONARIO -> DECIMAL====================
 print(float(Binary("0.001")))
 print(float(Binary("0.00011100001010001111010111000010100011110101110000101001")))
+
+#====================CONVERSÃO DECIMAL -> QUALQUER BASE====================
+x=0.3457
+binario = "" #variavel que armazena bits encontrados(0 e 1)
+base = 2
+casas = 50# quantidade de casas binarias a serem calculadas
+for i in range(casas):
+  x=x*base#multiplica a parte fracionaria por 2
+  bit=int(x) ##pega a parte inteira do x (0 ou 1)##
+  print(f"Passo {i+1}: valor multiplicado={x:.10f},bit={bit}")
+  binario += str(bit)
+  x = x - bit
+print("\nResultado final em binário:")
+print("0."+binario)
+
+#0,3457 _10
+#0,3457*2 = 0,6914 (0)
+#0,6914*2 = 1,3828 => 0,3828 (1)
+#0,3828*2 = 0,7656 (0)
+#0,7656*2 = 1,5312 =>0,5312 (1)
+#0,5312*2 = 1,0624 =>0,0624 (1)
+#0,0624*2 = 0,1248 (0)
+
+#010110
+
