@@ -41,3 +41,5 @@ print(str(Binary(0.125)).replace("0b","x="))
 #x=0.001
 
 #====================BINARIO FRACIONARIO -> DECIMAL====================
+print(float(Binary("0.001")))
+print(float(Binary("0.00011100001010001111010111000010100011110101110000101001")))
