@@ -72,3 +72,20 @@ print("0."+binario)
 
 #010110
 
+#====================HEXADECIMAL====================
+
+x=0.3457
+hex_frac=" "
+base=16
+casas = 100
+hex_digits= "0 1 2 3 4 5 6 7 8 9 A B C D E F"
+for i in range(casas):
+  x=x*base
+  inteiro = int(x)
+  print(f"Passo{i+1}:Valor multiplicado ={x:.12f},digito={hex_digits[inteiro]}")
+  hex_frac += hex_digits[inteiro]
+  x=x-inteiro
+print("\n Resultado final em hexadecimal:")
+print("0."+hex_frac)
+
+#0.  4  6  1 51 6400000000000000000000000000000000000000000000000000000000000000000000000000000000000000
